@@ -5,6 +5,7 @@ void main() {
 
   print("### Program Shopping Cart ###");
   print("Masukkan item ke keranjang (ketik 'selesai' untuk berhenti):");
+  print("Ketika Memasukkan Harga tidak perlu menggunakan titik dan nol.!");
 
   
   while (true) {
@@ -25,7 +26,7 @@ void main() {
     }
 
     cart.add(Item(itemName, itemPrice)); 
-    print("Item '$itemName' dengan harga \RP.${itemPrice.toStringAsFixed(0)} telah ditambahkan ke keranjang.\n");
+    print("Item '$itemName' dengan harga \RP ${itemPrice.toStringAsFixed(3)} telah ditambahkan ke keranjang.\n");
   }
 
   
@@ -34,7 +35,7 @@ void main() {
     print("Keranjang kosong.");
   } else {
     for (int i = 0; i < cart.length; i++) {
-      print("${i + 1}. ${cart[i].name} - \RP.${cart[i].price.toStringAsFixed(0)}");
+      print("${i + 1}. ${cart[i].name} - \RP ${cart[i].price.toStringAsFixed(3)}");
     }
   }
 
@@ -66,7 +67,7 @@ if (removeOption != null && removeOption.toLowerCase() == 'y') {
     print("Keranjang kosong. Tidak ada total harga.");
   } else {
     double totalPrice = cart.fold(0, (sum, item) => sum + item.price);
-    print("Total harga: \RP.${totalPrice.toStringAsFixed(0)}");
+    print("Total harga: \RP ${totalPrice.toStringAsFixed(3)}");
   }
 
   print("\nProgram selesai. Terima kasih!");
