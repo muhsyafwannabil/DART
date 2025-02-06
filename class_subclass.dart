@@ -1,6 +1,6 @@
 class Animal {
   void speak() {
-    print("Animal is making a sound.");
+    print("hewan mengeluarkan suara.");
   }
 }
 
