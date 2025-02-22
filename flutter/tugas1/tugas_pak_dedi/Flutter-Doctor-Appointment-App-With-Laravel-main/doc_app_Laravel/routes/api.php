@@ -19,6 +19,7 @@ use Illuminate\Support\Facades\Route;
 
 //this is the endpoint with prefix /api
 Route::post('/login', [UsersController::class, 'login']);
+Route::get('/all', [UsersController::class, 'all']);
 Route::post('/register', [UsersController::class, 'register']);
 
 //modify this

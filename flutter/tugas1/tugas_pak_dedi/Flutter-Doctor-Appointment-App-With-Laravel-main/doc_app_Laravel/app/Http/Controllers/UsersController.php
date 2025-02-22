@@ -50,7 +50,10 @@ class UsersController extends Controller
 
         return $user; //return all data
     }
-
+    public function all()
+    {
+        return User::all();
+    }
     /**
      * loign.
      *
